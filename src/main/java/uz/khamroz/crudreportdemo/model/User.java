@@ -1,14 +1,12 @@
 package uz.khamroz.crudreportdemo.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jdk.jfr.DataAmount;
 import lombok.Data;
 import uz.khamroz.crudreportdemo.model.enums.Role;
 
 @Entity
+@Table(name = "users")
 @Data
 public class User {
 
