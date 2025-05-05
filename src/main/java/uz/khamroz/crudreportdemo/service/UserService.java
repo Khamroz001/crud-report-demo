@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import uz.khamroz.crudreportdemo.model.User;
 import uz.khamroz.crudreportdemo.repository.UserRepository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,6 +31,7 @@ public class UserService {
             Optional.ofNullable(userDetails.getUsername()).ifPresent(user::setUsername);
             Optional.ofNullable(userDetails.getPassword()).ifPresent(user::setPassword);
             Optional.ofNullable(userDetails.getRole()).ifPresent(user::setRole);
+            user.setLastLogin(String.valueOf(LocalDateTime.now()));
             return userRepository.save(user);
         }).orElseThrow(()->new RuntimeException("User not found"));
     }

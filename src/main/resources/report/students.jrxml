@@ -1,0 +1,67 @@
+<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<jasperReport name="users" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f097a6b0-369f-4edb-82c9-350dc064010d">
+
+
+    <field name="id" class="java.lang.Long"> </field>
+    <field name="username" class="java.lang.String"> </field>
+    <field name="role" class="uz.khamroz.crudreportdemo.model.enums.Role"> </field>
+
+
+    <background/>
+    <title height="72">
+        <element kind="frame" uuid="1258aaf6-aa03-4114-94bb-33cd7aae5e48" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699">
+            <element kind="staticText" uuid="faea4d9f-8d4d-4906-ac2f-802a4055f034" x="20" y="20" width="300" height="43" forecolor="#FFFFFF" fontSize="34.0" bold="true">
+                <text><![CDATA[Khamroz Institute]]></text>
+            </element>
+            <element kind="staticText" uuid="9f185ea4-e9df-4bb5-be78-4f4e687651e3" x="395" y="43" width="180" height="20" forecolor="#FFFFFF" fontSize="14.0" bold="false" hTextAlign="Right">
+                <text><![CDATA[Students reports]]></text>
+            </element>
+        </element>
+    </title>
+    <pageHeader height="13"/>
+    <columnHeader height="21">
+        <element kind="line" uuid="0292e9b7-a6a3-4ba2-9b35-b0e23771c7df" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+        <element kind="staticText" uuid="92ab716c-f72f-4b9d-8d35-ecf203122fa0" mode="Opaque" x="0" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+            <text><![CDATA[ID]]></text>
+            <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8931de51-42df-497b-9967-0350ff63643e"/>
+        </element>
+        <element kind="staticText" uuid="88bb7cd3-950f-42c4-ba6b-469e492e01bb" mode="Opaque" x="92" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+            <text><![CDATA[USERNAME]]></text>
+            <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cffd4965-8471-4f6d-9a34-913d85918420"/>
+        </element>
+        <element kind="staticText" uuid="7ee41682-8411-4d88-b2b3-e6d0a8a36935" mode="Opaque" x="184" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+            <text><![CDATA[ROLE]]></text>
+            <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="323ff8cd-37ae-48df-a376-6a50d4a0f7c0"/>
+        </element>
+    </columnHeader>
+    <detail>
+        <band height="20">
+            <element kind="line" uuid="29392724-9a5a-4c2b-9836-332583a052b4" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+            <element kind="textField" uuid="17082589-4d58-4bea-b801-54f65510721b" x="0" y="0" width="92" height="20" fontSize="14.0" textAdjust="StretchHeight">
+                <expression><![CDATA[$F{id}]]></expression>
+                <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8931de51-42df-497b-9967-0350ff63643e"/>
+            </element>
+            <element kind="textField" uuid="3ac61562-54f2-4578-876d-4e14b32f25b3" x="92" y="0" width="92" height="20" fontSize="14.0" textAdjust="StretchHeight">
+                <expression><![CDATA[$F{username}]]></expression>
+                <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cffd4965-8471-4f6d-9a34-913d85918420"/>
+            </element>
+            <element kind="textField" uuid="816cdec7-700e-4301-a1b5-e8e6d5e29aa0" x="184" y="0" width="92" height="20" fontSize="14.0" textAdjust="StretchHeight">
+                <expression><![CDATA[$F{role}]]></expression>
+                <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="323ff8cd-37ae-48df-a376-6a50d4a0f7c0"/>
+            </element>
+        </band>
+    </detail>
+    <columnFooter/>
+    <pageFooter height="17">
+        <element kind="textField" uuid="86135810-77e7-4168-a1a7-5396f106fe91" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" hTextAlign="Right">
+            <expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+        </element>
+        <element kind="textField" uuid="6a421719-397b-47e7-88ab-7ec1153d4c43" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" evaluationTime="Report">
+            <expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+        </element>
+        <element kind="textField" uuid="938cb092-8265-49bb-846f-a2bcf51270a4" x="0" y="4" width="100" height="13" pattern="EEEEE dd MMMMM yyyy">
+            <expression><![CDATA[new java.util.Date()]]></expression>
+        </element>
+    </pageFooter>
+    <summary/>
+</jasperReport>
